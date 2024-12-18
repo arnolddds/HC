@@ -24,7 +24,7 @@ class HeatConductionHeterogeneous2D:
         self.nx1, self.nx2, self.nx3, self.nx4 = nx1, nx2, nx3, nx4
         self.ny1, self.ny2, self.ny3, self.ny4 = ny1, ny2, ny3, ny4
 
-        # Свойства материалов (1: медь, 2: сталь, 3: железо)
+        # Свойства материалов 
         self.material_properties = {
             1: {'lambda': 401, 'rho': 8960, 'c': 385},  # Медь
             2: {'lambda': 46, 'rho': 7800, 'c': 460},   # Сталь
@@ -41,9 +41,6 @@ class HeatConductionHeterogeneous2D:
         self._add_inclusions()
 
     def _add_inclusions(self):
-        """
-        Добавление включений из стали и железа в материал.
-        """
         # Расчет узлов для включений по X
         x1 = self.nx1
         x2 = x1 + self.nx2
