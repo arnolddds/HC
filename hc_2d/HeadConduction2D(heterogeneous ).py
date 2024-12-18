@@ -120,7 +120,7 @@ class HeatConductionHeterogeneous2D:
                 elif self.material_grid[i, j] == 3:  # Железо
                     plt.scatter(x[j], y[i], color='green', s=1, label='Железо' if i == j == 1 else "")
 
-        # Настройка графика
+        #  график
         plt.title(f"Распределение температуры при t = {self.t_end} с")
         plt.xlabel("X (м)")
         plt.ylabel("Y (м)")
